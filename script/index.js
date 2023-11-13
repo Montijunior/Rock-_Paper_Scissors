@@ -43,3 +43,4 @@ const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection,computerSelection));
 
 // game function for the number of rounds
+// see loops
