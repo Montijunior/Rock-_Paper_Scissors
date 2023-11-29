@@ -31,20 +31,35 @@ function playRound(playerSelection,computerSelection) {
 }
 // create the playerSelection input and should case insensitive
 
-for (let i = 0; i < 5; i++) {
-    const playerSelection1 = String(prompt('Select either Rock,Paper or Scissors'));
-    const playerSelection = playerSelection1.toLowerCase();
 
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection,computerSelection));
 
+
+function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    let game = playRound(playerSelection,computerSelection);
-    if (game.includes === "You win!!") {
-        playerScore++
-    } else {
-        computerScore++;
+    for (let i = 0; i < 5; i++) {
+
+        const playerSelection1 = String(prompt('Select either Rock,Paper or Scissors'));
+        const playerSelection = playerSelection1.toLowerCase();
+
+        const computerSelection = getComputerChoice();
+        let result = (playRound(playerSelection,computerSelection));
+        console.log(result);
+
+        if (result.includes('win!!')) {
+            playerScore++;
+        } else {
+            computerScore++;
+        }
+
+        if (playerScore > computerScore) {
+            console.log('Congratulations you win the game.');
+        } else {
+            console.log('Sorry you loose the game!!');
+        }
+    
     }
+    
 }
+game();
