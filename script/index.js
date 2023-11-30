@@ -22,11 +22,11 @@ function playRound(playerSelection,computerSelection) {
         return `You loose!! ${computerSelection} beats ${playerSelection}`;
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return `You win!! ${playerSelection} beats ${computerSelection}`;
+        return `You Win !! ${playerSelection} beats ${computerSelection}`;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return `You win!! ${playerSelection} beats ${computerSelection}`;
+        return `You Win !! ${playerSelection} beats ${computerSelection}`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return `You win!! ${playerSelection} beats ${computerSelection}`;
+        return `You Win !! ${playerSelection} beats ${computerSelection}`;
     }
 }
 // create the playerSelection input and should case insensitive
@@ -47,7 +47,9 @@ function game() {
         let result = (playRound(playerSelection,computerSelection));
         console.log(result);
 
-        if (result.includes('win!!')) {
+        // if (result.includes('draw')) return;
+
+        if (result.includes('Win')) {
             playerScore++;
         } else {
             computerScore++;
