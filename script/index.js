@@ -61,8 +61,18 @@ function playRound(playerSelection,computerSelection) {
         if (playerScore === 5 || computerScore === 5) {
             buttons.forEach((button)=>{
                 button.disabled = true;
+                if (playerScore > computerScore) {
+                    resultText.textContent = `Congratulations you win the Game!! FinalScore ${playerScore} : ${computerScore}`;
+                    resultText.style.color = 'white';
+                    resultText.style.backgroundColor = 'green';
+                } else {
+                    resultText.textContent = `Sorry you loose the Game!! FinalScore ${playerScore} : ${computerScore}`;
+                    
+                }
+               
+                
             });
+            
         }
     }
-
-
+   
