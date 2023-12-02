@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    height: 100vh;
+}
 
 header {
     height: 60px;
@@ -43,9 +46,10 @@ header {
     background-color: azure;
     width: 100%;
     display: flex;
-    height: 250px;
+    height: 400px;
     align-items: center;
     justify-content: space-around;
+    
     /* font-size: 35px; */
     
 }
@@ -67,6 +71,30 @@ button {
 }
 #Scissors {
     background-color: yellow;
+}
+.roundResult {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f3567;
+}
+.footer {
+    font-size: 20px;
+    color: white;
+    font-family: monospace;
+    
+    
 }
 
 
