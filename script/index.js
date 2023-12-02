@@ -11,6 +11,7 @@ buttons.forEach((button)=>{
     button.addEventListener('click',()=>{
        let round = playRound(button.id,getComputerChoice());
         resultText.textContent = round;
+        isGameOver();
     })
 });
 
@@ -29,7 +30,7 @@ let computerScore = 0;
 
 
 function playRound(playerSelection,computerSelection) {
-    for ( let i = 0; i <= 5; i++) {
+    
     if (playerSelection === computerSelection) {
         // resultText.textContent = round;
         resultText.style.color = 'white';
@@ -53,7 +54,15 @@ function playRound(playerSelection,computerSelection) {
             return `You loose !! ${computerSelection} beats ${playerSelection}.`
 
         }
+        
     
     }
+    function isGameOver() {
+        if (playerScore === 5 || computerScore === 5) {
+            buttons.forEach((button)=>{
+                button.disabled = true;
+            });
+        }
+    }
 
-}
+
