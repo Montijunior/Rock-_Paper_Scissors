@@ -1,14 +1,13 @@
-// getComputerChoice : function,that randomly returns rock,paper or scissors.
-
+//Random computer choice
 function getComputerChoice() {
     let values = ['rock','paper','scissors'];
     let random = Math.floor((Math.random() * values.length));
     let choice = values[random];
     return choice;
 }
-// console.log(getComputerChoice()); working
 
-// playRound(playerSelection,computerSelection) : function that plays a single round of RPS and returns the winner
+
+
 
 function playRound(playerSelection,computerSelection) {
     // let's start with computerSelection
@@ -29,39 +28,3 @@ function playRound(playerSelection,computerSelection) {
         return `You Win !! ${playerSelection} beats ${computerSelection}`;
     }
 }
-// create the playerSelection input and should case insensitive
-
-
-
-
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-
-    for (let i = 0; i < 5; i++) {
-
-        const playerSelection1 = String(prompt('Select either Rock,Paper or Scissors'));
-        const playerSelection = playerSelection1.toLowerCase();
-
-        const computerSelection = getComputerChoice();
-        let result = (playRound(playerSelection,computerSelection));
-        console.log(result);
-
-        // if (result.includes('draw')) return;
-
-        if (result.includes('Win')) {
-            playerScore++;
-        } else {
-            computerScore++;
-        }
-
-        if (playerScore > computerScore) {
-            console.log('Congratulations you win the game.');
-        } else {
-            console.log('Sorry you loose the game!!');
-        }
-    
-    }
-    
-}
-game();
